@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="com.think.survey2016.HomeActivity">
+<include layout="@layout/toolbar_layout"/>
+    <!--<com.beardedhen.androidbootstrap.BootstrapWell
+        android:id="@+id/qView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="8dp"
+        android:background="@color/bootstrap_alert_cross_default"
+        android:elevation="4dp"
+        app:bootstrapSize="lg"
+        app:roundedCorners="true"> -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/qView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="8dp"
+
+        card_view:roundedCorners="true"
+        android:background="@color/bootstrap_alert_cross_default"
+        card_view:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="Question"
+                android:textColor="@color/primary_text"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/qImg"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:src="@drawable/logo" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="@color/accent" />
+
+            <RadioGroup
+                android:id="@+id/radioAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <RadioButton
+                    android:id="@+id/op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="50"
+                    android:drawableLeft="@drawable/yes_sma"
+                    android:hint="1" />
+
+
+                <RadioButton
+                    android:id="@+id/op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="50"
+                    android:drawableLeft="@drawable/no_small"
+                    android:hint="2" />
+
+
+            </RadioGroup>
+
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Vote"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="xl"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="false" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

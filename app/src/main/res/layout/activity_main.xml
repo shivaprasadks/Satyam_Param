@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Satyam Param"
+        android:textColor="#ffffff"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/aadhar_logo" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <com.beardedhen.androidbootstrap.BootstrapThumbnail
+            android:id="@+id/bootstrapThumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/qrcode"
+            app:bootstrapBrand="danger"
+            app:hasBorder="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapWell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="12dp"
+            android:elevation="4dp"
+            app:bootstrapSize="lg"
+            app:roundedCorners="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Scan the QRCODE of \n Adhaar card"
+                android:textStyle="bold" />
+        </com.beardedhen.androidbootstrap.BootstrapWell>
+
+
+    </LinearLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="12dp"
+        android:elevation="4dp"
+        android:onClick="launchFullActivity"
+        android:text="Scan QR"
+        app:bootstrapBrand="info"
+        app:bootstrapSize="xl"
+        app:buttonMode="regular"
+        app:roundedCorners="true"
+        app:showOutline="false" />
+
+</LinearLayout>
